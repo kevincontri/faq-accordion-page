@@ -1,6 +1,7 @@
 # FAQ Accordion
 
 Solução para o desafio [FAQ accordion](https://www.frontendmentor.io/challenges/faq-accordion-wyfFdeBwBz) do Frontend Mentor.
+- [Link](https://kevincontri.github.io/faq-accordion-page/) para visualização da página!
 
 ## Visão geral
 
