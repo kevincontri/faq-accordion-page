@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color Pallete */
+  --bg-purple: #faeeff;
+  --white: hsl(0, 100%, 100%);
+  --purple-100: hsl(275, 100%, 97%);
+  --purple-600: hsl(292, 16%, 49%);
+  --purple-950: hsl(292, 42%, 14%);
+  --purple-hover: #ad28eb;
+
+  /* Font */
+  --font-family: "Work Sans", sans-serif;
+  --font-faq-question: 700 16px/1.5 "Work Sans", sans-serif;
+  --font-faq-content: 400 16px/1.5 "Work Sans", sans-serif;
+}
+
+body {
+  background-color: var(--bg-purple);
+  font-family: var(--font-family);
+}
+
+.container-parent {
+  display: flex;
+  justify-content: center;
+  margin-top: -6rem;
+  max-height: 100vh;
+}
+
+.hero {
+  background-image: url("/assets/images/background-pattern-desktop.svg");
+  background-size: cover;
+  height: 200px;
+  z-index: -1;
+}
+
+.container {
+  max-width: 37%;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.faq {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-block-end: 1.2rem;
+  margin-block-start: 0.5rem;
+
+  img {
+    width: 33px;
+  }
+
+  h1 {
+    font-size: 2.9rem;
+    font-weight: 700;
+  }
+}
+
+.faq-question {
+  font: var(--font-faq-question);
+  background: none;
+  border-inline: none;
+  border-top: 1px solid var(--purple-100);
+  border-bottom: none;
+  cursor: pointer;
+  width: 100%;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--purple-950);
+}
+
+:nth-child(1 of .faq-question) {
+  border-top: none;
+}
+
+.faq-question:not(:nth-child(1 of .faq-question)) {
+  padding-top: 20px;
+}
+
+.faq-question::after {
+  content: url("assets/images/icon-plus.svg");
+  float: right;
+}
+
+.active,
+.faq-question:hover {
+  color: var(--purple-hover);
+}
+
+.active::after {
+  content: url("assets/images/icon-minus.svg");
+}
+
+.content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease-out;
+  margin-bottom: 1rem;
+
+  p {
+    font: var(--font-faq-content);
+    color: var(--purple-600);
+  }
+}
+
+.attribution {
+  margin-inline: auto;
+  bottom: 0.5rem;
+  font-size: 11px;
+  text-align: center;
+  font-weight: 500;
+  margin-block: 1.2rem;
+
+  a {
+    text-decoration: none;
+    color: var(--purple-600);
+    font-weight: 700;
+
+    &:hover {
+      color: var(--purple-hover);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .faq-question {
+    text-align: left;
+  }
+
+  .content {
+    margin-top: 0.5rem;
+  }
+}
