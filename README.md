@@ -13,9 +13,17 @@ Os usuários devem ser capazes de:
 - Ver os estados de hover em todos os elementos interativos da página
 - Visualizar o layout adaptado para diferentes tamanhos de tela
 
-### Screenshot
+### Screenshot - Versão Desktop:
 
-![Preview do projeto](./preview.jpg)
+<br>
+
+<img width="1657" height="820" alt="image" src="https://github.com/user-attachments/assets/4e1417d7-35f1-4f4e-980a-23c0094c59a9" />
+
+### Screenshot - Versão Mobile:
+
+<br>
+
+<img width="533" height="928" alt="image" src="https://github.com/user-attachments/assets/300a33a9-60c1-40e4-8549-5397024d2792" />
 
 ## Minha solução
 
